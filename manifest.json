@@ -1,0 +1,12 @@
+{
+  "name": "SuperAnimes autoplay",
+  "version": "1.0",
+  "description": "Trocar automaticamente de vídeo quando o atual acaba.",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://www.superanimes.site/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
