@@ -5,7 +5,7 @@
   "manifest_version": 2,
   "content_scripts": [
     {
-      "matches": ["*://*.superanimes.site/*"],
+      "matches": ["https://www.superanimes.site/*"],
       "js": ["index.js"]
     }
   ]
