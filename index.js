@@ -3,9 +3,9 @@
 
   async function openNextVideo () {
     // Select the next video
-    const nextVideos = document.querySelectorAll('.vjs-carousel-viewport li')
+    const nextVideos = document.querySelectorAll('.vjs-related-video-container a')
     const nextVideo = nextVideos[0]
-    const url = nextVideo.querySelector('a')
+    const url = nextVideo.getAttribute('href')
 
     // Get the new video url
     let response = await fetch(url)
@@ -18,7 +18,7 @@
     nextVideo.remove()
 
     // Hide the video list
-    document.querySelector('.vjs-related-carousel-holder').classList.remove('active')
+    document.querySelector('.vjs-related-video').classList.remove('vjs-related-video-active')
   }
 
   // Check if video has ended
