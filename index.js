@@ -3,9 +3,8 @@
 
   async function openNextVideo () {
     // Select the next video
-    const nextVideos = document.querySelectorAll('.vjs-related-video-container a')
-    const nextVideo = nextVideos[0]
-    const url = nextVideo.getAttribute('href')
+    const videoLinks = document.getElementsByClassName('boxMenuEps')[0].getElementsByTagName('div')
+    const url = videoLinks[1].getElementsByTagName('a')[0].href
 
     // Get the new video url
     let response = await fetch(url)
@@ -19,6 +18,9 @@
 
     // Hide the video list
     document.querySelector('.vjs-related-video').classList.remove('vjs-related-video-active')
+    
+    // Remove the actual video from list
+    videoLinks[1].remove();
   }
 
   // Check if video has ended
