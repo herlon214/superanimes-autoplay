@@ -1,6 +1,6 @@
 {
   "name": "SuperAnimes autoplay",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Trocar automaticamente de vídeo quando o atual acaba.",
   "manifest_version": 2,
   "content_scripts": [
