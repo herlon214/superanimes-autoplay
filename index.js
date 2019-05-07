@@ -13,11 +13,8 @@
     video.src = videoUrl
     video.play()
 
-    // Remove the actual video from list
-    nextVideo.remove()
-
     // Hide the video list
-    document.querySelector('.vjs-related-video').classList.remove('vjs-related-video-active')
+    document.getElementById('vjs-related-video-close-button').click()
     
     // Remove the actual video from list
     videoLinks[1].remove();
