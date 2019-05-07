@@ -1,5 +1,6 @@
 (() => {
   const video = document.querySelector('#play1_html5_api')
+  let isLoading = false
 
   async function openNextVideo () {
     // Select the next video
@@ -18,12 +19,16 @@
     
     // Remove the actual video from list
     videoLinks[1].remove();
+    
+    // Prevent call next video loading twice
+    isLoading = false
   }
 
   // Check if video has ended
   setInterval(() => {
-    if (video.ended) {
+    if (video.ended && ! isLoading) {
       console.log('Video terminou, abrindo o próximo...')
+      isLoading = true
       openNextVideo()
     }
   }, 1000)
